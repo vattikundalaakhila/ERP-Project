@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERP Login</title>
+    <link rel="stylesheet" href="./Styles/login.css">
+</head>
+<body>
+    <section>
+        <header>
+        <h1>NexusERP Lite</h1>
+        <p>Enterprise Resource Planning System</p>
+    </header>
+
+        <div class="division">
+            
+            <h2>Welcome back</h2>
+            <p>sign in to access your dashboard</p>
+
+            <form id="login_form"> 
+            <div>
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" placeholder="enter your username" required>
+
+            </div>
+
+            <div>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="enter your password" required>
+            </div>
+
+                <div>
+                <button class="signIn-btn" type="submit">Sign In</button>
+                </div>
+
+            
+        </form>
+        </div>
+    </section>
+    <script type="module" src="./Script/login.js">
+
+    </script>
+</body>
+</html>
