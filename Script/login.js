@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         // const given_username = event.target[0].value;
         // const given_password = event.target[1].value;
 
-        const give_username = document.getElementById("username").value
+        const given_username = document.getElementById("username").value
         const given_password = document.getElementById("password").value
        
 
