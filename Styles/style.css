@@ -25,7 +25,7 @@ a{
 }
 .dashboard_sidebar{
     flex-basis: 20%;
-     background-color: #53455c; 
+     background-color: #756281; 
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -37,19 +37,25 @@ header{
     margin: 20px;
 
 }
-header h1{
+header img{
+    max-width: 40px;
+    height: 40px;
+}
+ header h1{
     color: #f1f5f9;
     font-size: 1.3em;
     
 
 }
 header p{
-    color: #808EA3;
+    color: #5c85c3;
+    font-size: 1rem;
+    font-weight: 500;
 }
 .dashboard_sidebar_nav ul{
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 10px;
     color: white;
 }
 .dashboard_sidebar_nav ul li{
@@ -57,14 +63,53 @@ header p{
     border-radius: 10px;
     cursor: pointer;
     padding: 10px;
+    height: 50px;
+  
     
 }
+.dashboard_sidebar_nav ul li a{
+    
+   display: flex;
+   gap: 20px;
+   /* justify-content: space-between; */
+   align-items: center;
+   width: 100%;
+
+  
+    
+}
+.dashboard_sidebar_nav ul li a img{
+  min-width: 20px;
+}
+.dashboard_sidebar_nav ul li a .arrow_img{
+  
+  display :none;
+ 
+  width: 7px;
+  height: 9px;
+  margin-top: 7px;
+  margin-left: auto;
+   
+
+  
+}
+.dashboard_sidebar_nav ul li:hover a .arrow_img{
+  
+    display: flex;
+    justify-content: space-between;
+   
+
+
+   
+  
+}
+
 .dashboard_sidebar_nav ul li:hover{
-    background-color: rgb(137, 137, 218);
-    border-radius: 10px;
+    background-color: rgb(171, 171, 196);
+    /* border-radius: 10px;
     width: 220px;
     height: 50px;
-    padding: 10px;
+    padding: 10px; */
     
 }
 .dashboard_sidebar_nav ul li a img{
@@ -75,11 +120,21 @@ header p{
 .dashboard_sidebar_nav {
     margin: 40px 10px;
 }
+.dashboard_sidebar_nav ul li.active {
+    background-color: rgb(137, 137, 218);
+}
+
+.dashboard_sidebar_nav ul li.active .arrow_img {
+    display: block;
+}
+
 .dashboard_sidebar_footer{
-    margin: 30px 20px;
+    margin: 20px 20px; 
+   
     
 
 }
+
 .dashboard_sidebar_footer button{
     color: red;
     border: none;

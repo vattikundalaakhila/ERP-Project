@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NexusERP-Inventory</title>
     <link rel="stylesheet" href="./Styles/style.css">
+    <link rel="stylesheet" href="./Styles/inventory.css">
 </head>
 <body>
     <div class="dashboard">
@@ -13,7 +14,7 @@
         <div>
         <header>
             <div class="dashboard_sidebar_header_logo">
-                <img src="" alt="ERP logo">
+                <img src="./Assets/erp (1).png" alt="ERP logo">
             </div>
             <div class="dashboard_sidebar_header_title">
                 <h1>NexusERP</h1>
@@ -24,10 +25,10 @@
         <hr>
         <nav class="dashboard_sidebar_nav">
             <ul>
-                <li><a href="./index.html"><img src="./Assets/dashbord.png" alt="dashboard_logo"> Dashboard</a></li>
-                <li><a href="./inventory.html"><img src="./Assets/inventory.png" alt="inventory_logo">Inventory</a></li>
-                <li><a href="./sales.html"><img src="./Assets/cart.png" alt="cart_logo">Sales</a></li>
-                <li><a href="./employees.html"><img src="./Assets/employee.png" alt="emp_logo">Employees</a></li>
+                <li><a href="./index.html"><img src="./Assets/dashboard.png" alt="dashboard_logo"> Dashboard<img class="arrow_img" src="./Assets/right-arrow.png" alt="arrow"></a></li>
+                <li><a href="./inventory.html"><img src="./Assets/inventory.png" alt="inventory_logo">Inventory<img class="arrow_img" src="./Assets/right-arrow.png" alt="arrow"></a></li>
+                <li><a href="./sales.html"><img src="./Assets/cart.png" alt="cart_logo">Sales<img class="arrow_img" src="./Assets/right-arrow.png" alt="arrow"></a></li>
+                <li><a href="./employees.html"><img src="./Assets/employee.png" alt="emp_logo">Employees<img class="arrow_img" src="./Assets/right-arrow.png" alt="arrow"></a></li>
             </ul>
 
         </nav>
@@ -42,13 +43,132 @@
 
     </aside>
     <main class="dashboard_main">
-this is inventory page
+        <header class="inventory_header">
+            
+            <div class="headings">
+                <h1 class="inventory_header_h1">Inventory</h1>
+                <p >Manage your products and stock levels</p>
+
+            </div>
+            <div class="buttons">
+                <button id="csv_btn">Export CSV </button>
+                <button id="add_product_btn"> Add Product</button>
+
+
+            </div>
+            
+        </header>
+        <section class="search_section"> 
+            <div>
+                <input type="search" id="search" placeholder="Search products by name or category">
+            </div>
+
+        </section>
+        <section class="table_section">
+            <table>
+                <thead>
+                    <tr></tr>
+                    <th>PRODUCT NAME</th>
+                    <th>CATEGORY</th>
+                    <th>PRICE</th>
+                    <th>QUANTITY</th>
+                    <th>STATUS</th>
+                    <th>ACTIONS</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tablebody">
+
+                </tbody>
+
+            </table>
+        </section>
+        <div class="p_tag">
+            <p>showing n of n products</p>
+        </div>
+
+    
+
     </main>
+    <footer>
+
+    </footer>
+
 
 
    </div>
-    <script type="module" src="./Script/app.js">
 
+   <template id="table_template">
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+            <button>Edit</button>
+            <button>Delete</button>
+        </td>
+    </tr>
+
+   </template>
+
+   <dialog id="addproduct_dialog">
+    <section id="addproduct_dialog_section">
+        <header>
+            <h2>Add New Product</h2>
+            <button id="addproduct_dialog_close">X</button>
+        </header>
+        <hr>
+        <form id="addproduct_form">
+            <div>
+                <label for="product_name">Product Name*</label>
+                <input type="text" id="product_name" placeholder="Enter product name " required>
+
+            </div>
+
+            <div>
+                <label for="category">category*</label>
+                <select name="category" id="category" required>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Accessories">Accessories</option>
+                    <option value="Software">Software</option>
+                    <option value="Hardware">Hardware</option>
+                    <option value="Services">Services</option>
+                
+
+                </select>
+
+
+            </div>
+
+            <div class="priceandquantity">
+            <div>
+                <label for="price">Price($)*</label>
+                <input type="number" id="price" placeholder="0.00" required>
+            </div>
+            <div>
+                <label for="Quantity">Quantity*</label>
+                <input type="number" id="quantity" placeholder="0" required>
+            </div>
+            </div>
+
+            <div class="button_div">
+                <button type="button" id="form_cancel_btn">Cancel</button>
+                <button id="form_add_product_btn">Add Product</button>
+            </div>
+
+        </form>
+
+    </section>
+
+   </dialog>
+    <script type="module" src="./Script/app.js">
+       
+
+
+   </script>
+   <script type="module" src="./Script/inventory.js">
 
    </script>
 </body>
