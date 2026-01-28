@@ -164,7 +164,7 @@
 
 }
 
-#addproduct_dialog_section #addproduct_dialog_close{
+#addproduct_dialog_section {
     border: none;
     
  background-color: white;
@@ -176,9 +176,18 @@
 
 }
 #addproduct_dialog_close:hover{
-    background-color : red;
+    background-color : rgb(238, 233, 233);
     color: red;
+  
     
+}
+#addproduct_dialog_close{
+    background-color: transparent;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 7px 10px;  
+    border-radius: 10px;
 }
 #addproduct_dialog_section form {
     display: flex;

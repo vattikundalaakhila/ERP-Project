@@ -1,57 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NexusERP-Sales</title>
     <link rel="stylesheet" href="./Styles/style.css">
+    <link rel="stylesheet" href="./Styles/sales.css">
 </head>
-<body >
-    <div class="dashboard">
-    <aside class="dashboard_sidebar">
-        <div>
-        <header>
-            <div class="dashboard_sidebar_header_logo">
-                <img src="./Assets/erp (1).png" alt="ERP logo">
-            </div>
-            <div class="dashboard_sidebar_header_title">
-                <h1>NexusERP</h1>
-                <p>Lite Edition</p>
 
+<body>
+    <div class="dashboard">
+        <aside class="dashboard_sidebar">
+            <div>
+                <header>
+                    <div class="dashboard_sidebar_header_logo">
+                        <img src="./Assets/erp (1).png" alt="ERP logo">
+                    </div>
+                    <div class="dashboard_sidebar_header_title">
+                        <h1>NexusERP</h1>
+                        <p>Lite Edition</p>
+
+                    </div>
+                </header>
+                <hr>
+                <nav class="dashboard_sidebar_nav">
+                    <ul>
+                        <li><a href="./index.html"><img src="./Assets/dashboard.png" alt="dashboard_logo">Dashboard<img
+                                    class="arrow_img" src="./Assets/right-arrow.png" alt="arrow"></a></li>
+                        <li><a href="./inventory.html"><img src="./Assets/inventory.png"
+                                    alt="inventory_logo">Inventory<img class="arrow_img" src="./Assets/right-arrow.png"
+                                    alt="arrow"></a></li>
+                        <li><a href="./sales.html"> <img src="./Assets/cart.png" alt="cart_logo">Sales<img
+                                    class="arrow_img" src="./Assets/right-arrow.png" alt="arrow"></a></li>
+                        <li><a href="./employees.html"> <img src="./Assets/employee.png" alt="emp_logo">Employees<img
+                                    class="arrow_img" src="./Assets/right-arrow.png" alt="arrow"></a></li>
+                    </ul>
+
+                </nav>
             </div>
+
+            <div>
+                <hr>
+                <footer class="dashboard_sidebar_footer">
+                    <button id="logout_btn">Log Out</button>
+
+                </footer>
+            </div>
+
+        </aside>
+        <main class="dashboard_main">
+            <header class="sales_header">
+                <div class="sales_header_left">
+                    <h1>Sales</h1>
+                    <p>Track sales and generate reports</p>
+                </div>
+                <div class="sales_header_right">
+                    <button id="sales_csv_btn">Export CSV</button>
+                    <button id="add_sales_btn">+ New Sale</button>
+                </div>
+            </header>
+            <section class="sales_table_section">
+                <h2 class="heading">Sales History</h2>
+                <hr>
+                <div class="table_container">
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>DATE & TIME</th>
+                                <th>PRODUCT</th>
+                                <th>QUANTITY</th>
+                                <th>UNIT PRICE</th>
+                                <th>TOTAL</th>
+                            </tr>
+                        </thead>
+                        <tbody id="sales_table_body">
+
+                        </tbody>
+
+                    </table>
+                </div>
+
+            </section>
+        </main>
+    </div>
+
+    <dialog id="add_sales_dialog">
+        <header>
+            <div class="header_div_left">
+                <img src="./Assets/cart.png" alt="sales image"> 
+                <h2>New Sale</h2>
+            </div>
+            <div id="x_btn">X</div>
         </header>
         <hr>
-        <nav class="dashboard_sidebar_nav">
-            <ul>
-                <li><a href="./index.html"><img src="./Assets/dashboard.png" alt="dashboard_logo">Dashboard<img class="arrow_img" src="./Assets/right-arrow.png" alt="arrow"></a></li>
-                <li><a href="./inventory.html"><img src="./Assets/inventory.png" alt="inventory_logo">Inventory<img class="arrow_img" src="./Assets/right-arrow.png" alt="arrow"></a></li>
-                <li><a href="./sales.html"> <img src="./Assets/cart.png" alt="cart_logo">Sales<img class="arrow_img" src="./Assets/right-arrow.png" alt="arrow"></a></li>
-                <li><a href="./employees.html"> <img src="./Assets/employee.png" alt="emp_logo">Employees<img class="arrow_img" src="./Assets/right-arrow.png" alt="arrow"></a></li>
-            </ul>
+        <form id="add_sales_form">
+            <div>
+                <label for="select_product">Select Product*</label>
+                <select name="product" id="select_product">
+                    <option value="">choose a product</option>
+                    <!-- options are displayed from inventory data -->
 
-        </nav>
-        </div>
+                </select>
+            </div>
+            <div>
+                <label for="quantity">Quantity*</label>
+                <input type="number" id="quantity" name="quantity" min="1" max="" value="1" >
+            </div>
+            <span id="product_quantity"></span>
+            
+            <div class="form_buttons">
+                
+                <button id="sales_cancel_btn" type="button">Cancel</button>
+                
+                
+                <button id="complete_sale_btn">Complete Sale</button>
+                
+                
 
-        <div>
-            <hr>
-        <footer class="dashboard_sidebar_footer">
-            <button id="logout_btn">Log Out</button>
+            </div>
+            
+        </form>
 
-        </footer>
-        </div>
+    </dialog>
+    <template id="sales_data_template">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
 
-    </aside>
-    <main class="dashboard_main">
-        this is sales page
-
-    </main>
+    </template>
 
 
-   </div>
-   
+
+
+
+
+
     <script type="module" src="./Script/app.js">
 
-   </script>
-      
+
+    </script>
+<script type="module" src = "./Script/sales.js">
+
+</script>
 </body>
+
 </html>

@@ -36,7 +36,23 @@ form_cancel_btn.addEventListener("click", (e)=>{
     
 
 })
+const search = document.getElementById("search");
 
+search.addEventListener("input", (event) => {
+  const value = event.target.value.toLowerCase();
+
+  if (value === "") {
+    render_data(inventory_data);
+    return;
+  }
+
+  const filteredData = inventory_data.filter((item) =>
+    item.productName.toLowerCase().includes(value) ||
+    item.productCategory.toLowerCase().includes(value)
+  );
+
+  render_data(filteredData);
+});
 
 //functionality for the Add Product 
  

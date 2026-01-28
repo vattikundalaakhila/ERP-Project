@@ -1,0 +1,244 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.sales_header{
+    display : flex;
+    justify-content: space-between;
+    /* padding: 20px 15px; */
+}
+.sales_header_left h1{
+    color: black;
+}
+.sales_header_left p{
+    color: #65758B
+}
+.sales_header_right button{
+    border:none;
+    padding: 10px 12px;
+
+
+}
+.dashboard_main{
+    margin: 20px;
+}
+.sales_header_right{
+    display: flex;
+    gap: 10px;
+}
+.sales_header_right #add_sales_btn{
+    color: white;
+    background-color:  #0DA2E7;
+font-size: 1rem;
+font-weight: 500;
+border-radius: 10px;}
+
+.sales_header_right #sales_csv_btn{
+    color: black;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 10px;
+    background-color: #F1F5F9;
+
+}
+.sales_table_section{
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-right: 20px;
+  
+
+
+
+    ;
+}
+.sales_table_section .heading{
+    font-size: 1.1rem;
+    padding: 20px;
+}
+.sales_table_section table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table_container table th{
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #3a4350;
+    background-color: #b1bcc780;
+}
+.table_container table th, .table_section table td{
+    /* border: 1px solid #ccc; */
+     /* padding: 1%;  */
+    text-align: center;
+}  
+/* Sales table body cells */
+.sales_table_section tbody td{
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #1f2937;
+    padding: 14px 10px;
+    border-bottom: 1px solid #e5e7eb;
+}
+.sales_table_section table th,
+.sales_table_section table td{
+    padding: 14px 10px;   /* SAME VALUES */
+    text-align: center;
+    box-sizing: border-box;
+}
+.sales_table_section thead th{
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #3a4350;
+    background-color: #F1F5F980;
+}
+.sales_table_section tbody td{
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #1f2937;
+    border-bottom: 1px solid #e5e7eb;
+}
+.sales_table_section table{
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+
+
+/* dialog css */
+#add_sales_dialog{
+    margin: auto;
+     padding-left: 2%; 
+     padding-right: 2%;
+     padding-bottom: 2%;
+    border: none;
+    min-width: 330px;
+    border-radius: 10px;
+
+}
+#add_sales_dialog header{
+    display: flex;
+  
+    /* border: 1px solid black; */
+    justify-content: space-between;
+
+}
+#add_sales_dialog header h2{
+    font-size: 1.1rem;
+    margin-top: 4px;
+}
+#add_sales_dialog_section{
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
+
+}
+#add_sales_dialog_section header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+}
+#x_btn{
+    font-size: 1rem;
+    font-weight: 500;
+     padding: 5px 10px;
+}
+#x_btn:hover{
+    background-color: #eceff3;
+   color: red;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#add_sales_dialog hr{
+    margin: 10px 0;
+    width: 100%;
+    padding: 0;
+
+
+}
+#add_sales_dialog .header_div_left{
+    display: flex;
+    gap: 10px;
+}
+.header_div_left img{
+    width: 20px;
+    height: 20px;
+    margin-top: 8px;   
+
+}
+#add_sales_dialog_ form {
+    display: flex;
+    flex-direction: column;
+    /* gap: 30px; */
+}
+#add_sales_form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+#add_sales_form label{
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 15px;
+   
+}
+#add_sales_form input, #add_sales_form select{
+    padding: 12px;
+    border-radius: 5px;
+   font-size: 1rem;
+    background-color: #F9FAFB;
+    width: 100%;
+    margin-top: 6px;
+    border: 1px solid #e1eaf4;
+    font-weight: 400;
+}
+#add_sales_form input:focus{
+    outline: none;
+     border: 2px solid #0DA2E7;
+
+}
+ #add_sales_form select:focus{
+    border: 2px solid #0DA2E7;
+}
+#add_sales_form  button{
+    border: none;
+    padding: 12px;
+    margin-top: 20px;
+
+}
+.form_buttons{
+    display: flex;
+  gap: 10px;
+
+}
+
+#complete_sale_btn{
+     font-size: 1rem; 
+    flex:1;
+    font-weight: 500;
+    background-color: rgb(64, 184, 64);
+    color: white;
+    border-radius: 10px;
+    border: 2px solid transparent;
+}
+#complete_sale_btn:hover{
+    border: solid rgb(64, 184, 64);
+}
+#sales_cancel_btn{
+    flex:1;
+    font-weight: 500;
+    border-radius: 10px;
+    font-size: 1rem;
+    border: 2px solid transparent;
+}
+#sales_cancel_btn:hover{
+    border: solid rgb(211, 210, 210);
+}

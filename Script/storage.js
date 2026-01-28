@@ -7,3 +7,5 @@ export const user_loggedIn = localStorage.getItem("LogIn");
 //to store the inventory data 
 
 export let inventory_data = JSON.parse(localStorage.getItem("inventory_data"))|| [];
+
+export let sales_data = JSON.parse(localStorage.getItem("sales_data"))||[];
